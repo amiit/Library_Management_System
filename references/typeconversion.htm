@@ -1,0 +1,1733 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_Head1"><link rel="canonical" href="http://msdn.microsoft.com/en-us/library/s2dy91zy.aspx"><title>
+	
+  Type Conversion Functions (Visual Basic)
+
+</title>
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/s2dy91zy(d=lightweight,l=en-us,v=vs.100).aspx">
+
+<meta name="NormalizedUrl" content="http://msdn.microsoft.com/en-us/library/s2dy91zy(d=lightweight,l=en-us,v=vs.100).aspx">
+
+<meta name="DCSext.ProductFamily" content="LIB_DG">
+
+<meta name="DCSext.Product" content="VS_Lang_VB">
+
+<meta name="DCSext.Title" content="Type Conversion Functions (Visual Basic)">
+
+<meta name="VotingContextUrl" content="http://msdn.microsoft.com/en-us/library/s2dy91zy(l=en-us,v=vs.100).aspx">
+
+<meta name="MN" content="35F992B6-1:03:16 PM">
+
+<meta name="Search.ShortId" content="s2dy91zy">
+
+<meta name="Ms.Locale" content="en-us">
+<link rel="stylesheet" type="text/css" href="typeconversion_files/Combined.css" xmlns="http://www.w3.org/1999/xhtml"><link rel="stylesheet" type="text/css" href="typeconversion_files/printview.css" media="print" title="printonly"><link rel="alternate" media="print" href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28d=printer%29.aspx"><script src="typeconversion_files/ms2.js" async="" type="text/javascript"></script><script src="typeconversion_files/broker.js"></script></head>
+<body>
+    
+        
+        
+  <div class="header">
+    
+
+<table class="headerBar cl_lightweight_topnav_slice" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="leftSection cl_lightweight_header_leftSection_wave leftSectionImageClusterOverride">
+        <div class="tabContainer">
+          <a href="http://msdn.microsoft.com/en-us/default.aspx" title="Home" class=" headerTab">Home</a>
+          <a href="http://msdn.microsoft.com/en-us/library/default.aspx" title="Library" class="headerTabSelected cl_lightweight_selected_tab_repeatX ">Library</a>
+          <a href="http://msdn.microsoft.com/en-us/bb188199.aspx" title="Learn" class=" headerTab">Learn</a>
+          <a href="http://msdn.microsoft.com/en-us/aa570309.aspx" title="Downloads" class=" headerTab">Downloads</a>
+          <a href="http://msdn.microsoft.com/en-us/hh361695.aspx" title="Support" class=" headerTab">Support</a>
+          <a href="http://msdn.microsoft.com/en-us/aa497440.aspx" title="Community" class=" headerTab">Community</a>
+          
+        </div>
+      </td>
+			<td class="rightSection cl_lightweight_header_rightSection_wave rightSectionImageClusterOverride">
+        <div class="tabContainer">
+            
+            <a href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=11&amp;ct=1334926996&amp;rver=6.0.5276.0&amp;wp=MCLBI&amp;wlcxt=msdn%24msdn%24msdn&amp;wreply=http%3a%2f%2fmsdn.microsoft.com%2fen-us%2flibrary%2fs2dy91zy.aspx&amp;lc=1033&amp;id=254354&amp;mkt=en-US" title="Sign in" rel="nofollow">Sign in </a>
+            <span class="pipe">|</span>
+            <a href="http://msdn.microsoft.com/en-us/library/preferences/locale/?returnurl=%252fen-us%252flibrary%252fs2dy91zy.aspx" title="United States - English" rel="nofollow">United States - English </a>
+            <span class="pipe">|</span>
+            <a class="dispinline clip15x15" href="http://msdn.microsoft.com/en-us/library/preferences/experience/?returnurl=%252fen-us%252flibrary%252fs2dy91zy.aspx" title="Preferences" rel="nofollow"><img class="head_gear" src="typeconversion_files/Msdn_ImageSprite.png" alt=""></a>
+            <span class="pipe">|</span>
+            <a id="exportPrintLink" class="dispinline clip30x15 moveToDown" href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28d=printer%29.aspx" title="Print/Export"><img class="head_print_noarrow" src="typeconversion_files/Msdn_ImageSprite.png" alt=""></a>
+            
+            <div id="exportPrintLinkArrowDiv" class="exportPrintLinkArrow">
+            <a id="exportPrintLinkArrow" class="dispinline clip30x15 moveToDown" href="javascript:void(0);" title="Print/Export"><img class="head_print_arrow" src="typeconversion_files/Msdn_ImageSprite.png" alt=""></a>
+            </div>
+            
+        </div>
+			</td>
+	</tr>
+</tbody></table>
+
+  </div>
+  <div class="contentPlaceHolder">
+    
+    
+  <div class="navigation" id="Navigation" style="width:280px;padding-bottom:96px;">
+    <div class="searchcontainer">
+      
+<form id="SearchForm" action="http://social.msdn.microsoft.com/search/en-us" method="get" style="margin: 0; padding: 0;" onsubmit="return checkSearchBox()">
+<div class="searchBoxContainer" style="">
+  <table class="searchBox" border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td class="searchTextBoxTd">
+        <input value="Search MSDN with Bing" id="SearchInput" maxlength="200" class="searchTextBox" name="query" type="text">
+        
+      </td>
+      <td class="searchButtonTd">
+          <input src="typeconversion_files/search_icon.gif" style="position: relative;" title="Search " type="image">
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    if (!MTPS) var MTPS = {};
+    if (!MTPS.Watermarks) MTPS.Watermarks = {};
+    MTPS.Watermarks.SearchInput = {
+        "control": "SearchInput",
+        "defaultValue": "Search MSDN with Bing",
+        "defaultCSS": "searchTextBox",
+        "focusCSS": "searchTextBoxTrue"
+    };
+    function checkSearchBox() {
+        if (document.getElementById("SearchInput").value == MTPS.Watermarks.SearchInput.defaultValue) {
+            document.getElementById("SearchInput").value = "";
+        }
+    }
+ //]]>
+</script>
+
+
+    </div>
+    <div class="navcontainer">
+      
+<div class="nav">
+    
+    <div id="tocnav">
+        
+        <div class="toclevel0 ancestry">
+            
+            <div class="clip5x9 nav_root">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_bullet" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ms123401.aspx" id="ms310241_MSDN.10_en-us" title="MSDN Library">MSDN Library</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/aa187916.aspx" id="aa187916_MSDN.10_en-us" title="Development Tools and Languages">Development Tools and Languages</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/dd831853.aspx" id="aa187919_MSDN.10_en-us" title="Visual Studio 2010">Visual Studio 2010</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/52f3sw5c.aspx" id="dd429925_VS.100_en-us" title="Visual Studio">Visual Studio</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/ee822860.aspx" id="dd548131_VS.100_en-us" title="Visual Studio Languages">Visual Studio Languages</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/dd642420.aspx" id="ee839491_VS.100_en-us" title="Visual Basic and Visual C#">Visual Basic and Visual C#</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/2x7h1hfk.aspx" id="ms299791_VS.100_en-us" title="Visual Basic">Visual Basic</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/25kad608.aspx" id="ms300189_VS.100_en-us" title="Visual Basic Reference">Visual Basic Reference</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/sh9ywfdk.aspx" id="ms300190_VS.100_en-us" title="Visual Basic Language Reference">Visual Basic Language Reference</a>
+            </div>
+            
+            <div class="clip5x9 nav_arrows">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_arrow" alt="">
+            </div>
+            
+            <div class="nav_div_currentroot">
+                <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/32s6akha.aspx" id="ms300204_VS.100_en-us" title="Functions (Visual Basic)">Functions (Visual Basic)</a>
+            </div>
+            
+        </div>
+        
+        <div class="clip13x9 nav_dots_current">
+            <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_dots" alt="">
+        </div>
+        
+        <div class="toclevel1 current">
+            <a data-tochassubtree="true" href="http://msdn.microsoft.com/en-us/library/s2dy91zy.aspx" id="dd456997_VS.100_en-us" title="Type Conversion Functions (Visual Basic)">Type Conversion Functions (Visual Basic)</a>
+        </div>
+        
+        <div class="toclevel2 children" style="border-bottom: 1px solid #bbbbbb;">
+            
+            <div class="clip13x9 nav_dots">
+                <img src="typeconversion_files/Msdn_ImageSprite.png" class="cl_nav_dots" alt="">
+            </div>
+            <div>
+                <a href="http://msdn.microsoft.com/en-us/library/ch47ss2a.aspx" title="Return Values for the CStr Function (Visual Basic)">Return Values for the CStr Function (Visual Basic)</a>
+            </div>
+            
+        </div>
+        
+    </div>
+    <img src="typeconversion_files/clear.gif" alt="Separator" class="communityContentNavigationSeparator cl_lt_cc_line_top">
+    
+    <div class="communityContentNavigation">
+        <div class="communityContentNavigationHeader">
+            Community Content</div>
+        
+        <div class="communityContentNavigationPost">
+            <div class="communityContentNavigationAvatarContainer">
+                <a class="communityContentNavigationLinkAvatar" href="#CommunityContent" title="User"><img alt="Avatar" class="cl_default_avatar" src="typeconversion_files/clear.gif"></a>
+            </div>
+            
+            <div class="communityContentNavigationLinkAbstractAdvertisement">
+                <ul>
+                    <li>
+                        Add code samples and tips to enhance this topic.</li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="communityContentNavigationMoreLink">
+            <a href="#CommunityContent" title="More...">More...</a></div>
+    </div>
+    
+</div>
+
+<script type="text/javascript"> 
+  //<![CDATA[
+  if (!MTPS) var MTPS = {};
+  MTPS.TopicNodes= {
+  
+            "_last": ''
+    };
+  //]]>
+</script>
+
+    </div>
+    
+  </div>
+  <div id="tocResizeContainer" style="visibility: visible;">
+  <a href="javascript:void(0)" class="tocResize" id="TocResize" style="left: 280px;">
+    <img id="ResizeImageIncrease" class="cl_nav_resize_open" src="typeconversion_files/Msdn_ImageSprite.png" title="Expand" alt="Expand">
+      <img id="ResizeImageReset" class="cl_nav_resize_close" src="typeconversion_files/Msdn_ImageSprite.png" style="display: none;" title="Minimize" alt="Minimize">
+  </a>
+  </div>
+  <div class="content">
+    
+    
+
+<div class="clip117x31 logo">
+  <a href="http://msdn.microsoft.com/en-us/default.aspx">
+    <img src="typeconversion_files/Msdn_ImageSprite.png" class="msdn_body_logo" alt="MSDN" title="MSDN">
+  </a>
+</div>
+
+    <div class="topicContainer">
+        
+            <div id="FeedbackCounterContainer">
+                
+
+
+
+
+
+
+            </div>
+        
+<div class="topic" xmlns="http://www.w3.org/1999/xhtml">
+  <h1 class="title">Type Conversion Functions (Visual Basic)</h1>
+  <div class="lw_vs">
+    <div id="curversion">
+      <strong>
+            Visual Studio 2010</strong>
+    </div>
+    <div id="versionclick" style="visibility: visible;">
+      <div id="vsseperator" class="cl_lw_vs_seperator"></div>
+      <div id="versionclick_c1"></div>
+      <div id="versionclick_c2">
+        <div class="">
+          <a id="vsLink" href="javascript:;">
+                    Other Versions
+                </a>
+        </div>
+        <div class="cl_vs_arrow clip10x10">
+          <img class="cl_lw_vs_arrow" id="vsArrow" alt="" src="typeconversion_files/Msdn_ImageSprite.png">
+        </div>
+      </div>
+      <div id="versionclick_c3"></div>
+    </div>
+    <ul id="vsPanel">
+      <li>
+        <a href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28v=vs.110%29.aspx" title="">Visual Studio 11</a>
+      </li>
+      <li>
+        <a href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28v=vs.90%29.aspx" title="">Visual Studio 2008</a>
+      </li>
+      <li>
+        <a href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28v=vs.80%29.aspx" title="">Visual Studio 2005</a>
+      </li>
+      <li>
+        <a href="http://msdn.microsoft.com/en-us/library/s2dy91zy%28v=vs.71%29.aspx" title="">Visual Studio .NET 2003</a>
+      </li>
+    </ul>
+  <div id="ratingCounterSeperator" class="cl_lw_vs_seperator" style="visibility: visible;"></div><div style="margin: 0px 0px 0px 13px;" id="ratingCounter">
+    <span id="rcA" class="ratingText">
+        3 out of 6 rated this helpful <a id="rateThisTopic" href="#feedback" title="Rate this topic">-&nbsp;Rate this topic</a>
+        
+    </span>
+</div></div>
+  <div style="clear:both;"></div>
+  
+  <div id="mainSection">
+    <div id="mainBody">
+      <p>
+        
+      </p> <div class="introduction"><p>These functions are compiled 
+inline, meaning the conversion code is part of the code that evaluates 
+the expression. Sometimes there is no call to a procedure to accomplish 
+the conversion, which improves performance. Each function coerces an 
+expression to a specific data type.</p></div><div id="syntaxSection" class="section">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_93f87449-3207-4b8a-91e6-6b6672bba0bd');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_93f87449-3207-4b8a-91e6-6b6672bba0bd" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>CBool(expression)
+CByte(expression)
+CChar(expression)
+CDate(expression)
+CDbl(expression)
+CDec(expression)
+CInt(expression)
+CLng(expression)
+CObj(expression)
+CSByte(expression)
+CShort(expression)
+CSng(expression)
+CStr(expression)
+CUInt(expression)
+CULng(expression)
+CUShort(expression)
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div><div xmlns=""><script type="text/javascript">if (!MTPS) var MTPS = {};if (!MTPS.LocalizedStrings) MTPS.LocalizedStrings = {}; 
+              MTPS.LocalizedStrings.ExpandButtonTooltip = 'Expand'; 
+              MTPS.LocalizedStrings.CollapseButtonTooltip = 'Collapse';</script><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="typeconversion_files/clear.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Part</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle0" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<dl class="authored" xmlns="http://www.w3.org/1999/xhtml">
+  <dt>
+    <span class="parameter">expression</span>
+  </dt>
+  <dd>
+    <p>Required. Any expression of the source data type.</p>
+  </dd>
+</dl></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="typeconversion_files/clear.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Return Value Data Type</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="sectionToggle1" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">The function name determines the data type of the value it returns, as shown in the following table.</p>
+<div class="caption" xmlns="http://www.w3.org/1999/xhtml">
+  
+</div>
+<div class="tableSection" xmlns="http://www.w3.org/1999/xhtml">
+  <table>
+    <tbody><tr>
+      <th>
+        <p>Function name</p>
+      </th>
+      <th>
+        <p>Return data type</p>
+      </th>
+      <th>
+        <p>Range for <span class="parameter">expression</span> argument</p>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CBool</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/wts33hb3.aspx">Boolean Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>Any valid <span><span class="input">Char</span></span> or <span><span class="input">String</span></span> or numeric expression.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CByte</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/e2ayt412.aspx">Byte Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>0 through 255 (unsigned); fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CChar</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/7sx7t66b.aspx">Char Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>Any valid <span><span class="input">Char</span></span> or <span><span class="input">String</span></span> expression; only first character of a <span><span class="input">String</span></span> is converted; value can be 0 through 65535 (unsigned).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CDate</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/3eaydw6e.aspx">Date Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>Any valid representation of a date and time.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CDbl</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/x99xtshc.aspx">Double Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-1.79769313486231570E+308 through -4.94065645841246544E-324 
+for negative values; 4.94065645841246544E-324 through 
+1.79769313486231570E+308 for positive values.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CDec</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/xtba3z33.aspx">Decimal Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>+/-79,228,162,514,264,337,593,543,950,335 for zero-scaled 
+numbers, that is, numbers with no decimal places. For numbers with 28 
+decimal places, the range is +/-7.9228162514264337593543950335. The 
+smallest possible non-zero number is 0.0000000000000000000000000001 
+(+/-1E-28).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CInt</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/06bkb8w2.aspx">Integer Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-2,147,483,648 through 2,147,483,647; fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CLng</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/y595sc15.aspx">Long Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-9,223,372,036,854,775,808 through 9,223,372,036,854,775,807; fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CObj</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/twcxd6b8.aspx">Object Data Type</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>Any valid expression.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CSByte</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/11dhfews.aspx">SByte Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-128 through 127; fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CShort</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/7tb7bdw6.aspx">Short Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-32,768 through 32,767; fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CSng</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/xay7978z.aspx">Single Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>-3.402823E+38 through -1.401298E-45 for negative values; 1.401298E-45 through 3.402823E+38 for positive values.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CStr</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/thwcx436.aspx">String Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>Returns for <span><span class="input">CStr</span></span> depend on the <span class="parameter">expression</span> argument. See <span><a href="http://msdn.microsoft.com/en-us/library/ch47ss2a.aspx">Return Values for the CStr Function (Visual Basic)</a></span>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CUInt</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/x79h55x9.aspx">UInteger Data Type</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>0 through 4,294,967,295 (unsigned); fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CULng</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/9zsfkcew.aspx">ULong Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>0 through 18,446,744,073,709,551,615 (unsigned); fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          <span>
+            <span class="input">CUShort</span>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>
+          <span>
+            <a href="http://msdn.microsoft.com/en-us/library/x68bebe2.aspx">UShort Data Type (Visual Basic)</a>
+          </span>
+        </p>
+      </td>
+      <td>
+        <p>0 through 65,535 (unsigned); fractional parts are rounded.<span class="sup">1</span></p>
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+<p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="sup">1</span> Fractional parts can be subject to a special type of rounding called <span class="parameter">banker's rounding</span>. See "Remarks" for more information.</p></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="typeconversion_files/clear.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">Remarks</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="languageReferenceRemarksToggle" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<p xmlns="http://www.w3.org/1999/xhtml">As a rule, you should use the Visual Basic type conversion functions in preference to the .NET Framework methods such as <span class="code">ToString()</span>, either on the <span><a href="http://msdn.microsoft.com/en-us/library/system.convert.aspx">Convert</a></span>
+ class or on an individual type structure or class. The Visual Basic 
+functions are designed for optimal interaction with Visual Basic code, 
+and they also make your source code shorter and easier to read. In 
+addition, the .NET Framework conversion methods do not always produce 
+the same results as the Visual Basic functions, for example when 
+converting <span><span class="input">Boolean</span></span> to <span><span class="input">Integer</span></span>. For more information, see <span><a href="http://msdn.microsoft.com/en-us/library/ae382yt8.aspx">Troubleshooting Data Types (Visual Basic)</a></span>.</p>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">Behavior</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <ul>
+    <li>
+      <p>
+        <span class="label">Coercion.</span> In general, you can use the
+ data type conversion functions to coerce the result of an operation to a
+ particular data type rather than the default data type. For example, 
+use <span><span class="input">CDec</span></span> to force decimal arithmetic in cases where single-precision, double-precision, or integer arithmetic would normally take place.</p>
+    </li>
+    <li>
+      <p>
+        <span class="label">Failed Conversions.</span> If the <span class="parameter">expression</span> passed to the function is outside the range of the data type to which it is to be converted, an <span><a href="http://msdn.microsoft.com/en-us/library/system.overflowexception.aspx">OverflowException</a></span> occurs.</p>
+    </li>
+    <li>
+      <p>
+        <span class="label">Fractional Parts.</span> When you convert a nonintegral value to an integral type, the integer conversion functions (<span><span class="input">CByte</span></span>, <span><span class="input">CInt</span></span>, <span><span class="input">CLng</span></span>, <span><span class="input">CSByte</span></span>, <span><span class="input">CShort</span></span>, <span><span class="input">CUInt</span></span>, <span><span class="input">CULng</span></span>, and <span><span class="input">CUShort</span></span>) remove the fractional part and round the value to the closest integer.</p>
+      <p>If the fractional part is exactly 0.5, the integer conversion 
+functions round it to the nearest even integer. For example, 0.5 rounds 
+to 0, and 1.5 and 2.5 both round to 2. This is sometimes called <span class="parameter">banker's rounding</span>, and its purpose is to compensate for a bias that could accumulate when adding many such numbers together.</p>
+      <p>
+        <span>
+          <span class="input">CInt</span>
+        </span> and <span><span class="input">CLng</span></span> differ from the <span><a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.int.aspx">Int</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.fix.aspx">Fix</a></span> functions, which truncate, rather than round, the fractional part of a number. Also, <span><span class="input">Fix</span></span> and <span><span class="input">Int</span></span> always return a value of the same data type as you pass in.</p>
+    </li>
+    <li>
+      <p>
+        <span class="label">Date/Time Conversions.</span> Use the <span><a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.information.isdate.aspx">IsDate</a></span> function to determine if a value can be converted to a date and time. <span><span class="input">CDate</span></span> recognizes date literals and time literals but not numeric values. To convert a Visual Basic 6.0 <span><span class="input">Date</span></span> value to a<span><span class="input"> Date</span></span> value in Visual Basic 2005 or later versions, you can use the <span><a href="http://msdn.microsoft.com/en-us/library/system.datetime.fromoadate.aspx">DateTime<span xmlns="">.</span>FromOADate</a></span> method.</p>
+    </li>
+    <li>
+      <p>
+        <span class="label">Neutral Date/Time Values.</span> The <span><a href="http://msdn.microsoft.com/en-us/library/3eaydw6e.aspx">Date Data Type (Visual Basic)</a></span>
+ always contains both date and time information. For purposes of type 
+conversion, Visual Basic considers 1/1/0001 (January 1 of the year 1) to
+ be a <span class="parameter">neutral value</span> for the date, and 00:00:00 (midnight) to be a neutral value for the time. If you convert a <span><span class="input">Date</span></span> value to a string, <span><span class="input">CStr</span></span> does not include neutral values in the resulting string. For example, if you convert <span class="code">#January 1, 0001 9:30:00#</span>
+ to a string, the result is "9:30:00 AM"; the date information is 
+suppressed. However, the date information is still present in the 
+original <span><span class="input">Date</span></span> value and can be recovered with functions such as <span><a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.dateandtime.datepart.aspx">DatePart</a></span> function.</p>
+    </li>
+    <li>
+      <p>
+        <span class="label">Culture Sensitivity.</span> The type 
+conversion functions involving strings perform conversions based on the 
+current culture settings for the application. For example, <span><span class="input">CDate</span></span>
+ recognizes date formats according to the locale setting of your system.
+ You must provide the day, month, and year in the correct order for your
+ locale, or the date might not be interpreted correctly. A long date 
+format is not recognized if it contains a day-of-the-week string, such 
+as "Wednesday".</p>
+      <p>If you need to convert to or from a string representation of a 
+value in a format other than the one specified by your locale, you 
+cannot use the Visual Basic type conversion functions. To do this, use 
+the <span class="code">ToString(IFormatProvider)</span> and <span class="code">Parse(String, IFormatProvider)</span> methods of that value's type. For example, use <span><a href="http://msdn.microsoft.com/en-us/library/system.double.parse.aspx">Double<span xmlns="">.</span>Parse</a></span> when converting a string to a <span><span class="input">Double</span></span>, and use <span><a href="http://msdn.microsoft.com/en-us/library/system.double.tostring.aspx">Double<span xmlns="">.</span>ToString</a></span> when converting a value of type <span><span class="input">Double</span></span> to a string.</p>
+    </li>
+  </ul>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CType Function</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The <a href="http://msdn.microsoft.com/en-us/library/4x2877xb.aspx">CType Function</a> takes a second argument, <span class="parameter">typename</span>, and coerces <span class="parameter">expression</span> to <span class="parameter">typename</span>, where <span class="parameter">typename</span> can be any data type, structure, class, or interface to which there exists a valid conversion.</p>
+  <p>For a comparison of <span><span class="input">CType</span></span> with the other type conversion keywords, see <span><a href="http://msdn.microsoft.com/en-us/library/7k6y2h6x.aspx">DirectCast Operator (Visual Basic)</a></span> and <span><a href="http://msdn.microsoft.com/en-us/library/zyy863x8.aspx">TryCast Operator (Visual Basic)</a></span>.</p>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CBool Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CBool</span></span> function to convert expressions to <span><span class="input">Boolean</span></span> values. If an expression evaluates to a nonzero value, <span><span class="input">CBool</span></span> returns <span><span class="input">True</span></span>; otherwise, it returns <span><span class="input">False</span></span>.</p>
+  <div id="snippetGroup">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_5449a5c3-d93d-4ebb-8e56-96c71f087eda');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_5449a5c3-d93d-4ebb-8e56-96c71f087eda" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> a, b, c <span style="color:Blue;">As</span> <span style="color:Blue;">Integer</span>
+<span style="color:Blue;">Dim</span> check <span style="color:Blue;">As</span> <span style="color:Blue;">Boolean</span>
+a = 5
+b = 5
+<span style="color:Green;">' The following line of code sets check to True.</span>
+check = <span style="color:Blue;">CBool</span>(a = b)
+c = 0
+<span style="color:Green;">' The following line of code sets check to False.</span>
+check = <span style="color:Blue;">CBool</span>(c)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CByte Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CByte</span></span> function to convert an expression to a <span><span class="input">Byte</span></span>.</p>
+  <div id="snippetGroup1">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_ca5495a4-77d7-4fec-93cb-69cd551341b8');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_ca5495a4-77d7-4fec-93cb-69cd551341b8" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aByte <span style="color:Blue;">As</span> <span style="color:Blue;">Byte</span>
+aDouble = 125.5678
+<span style="color:Green;">' The following line of code sets aByte to 126.</span>
+aByte = <span style="color:Blue;">CByte</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CChar Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CChar</span></span> function to convert the first character of a <span><span class="input">String</span></span> expression to a <span><span class="input">Char</span></span> type.</p>
+  <div id="snippetGroup2">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_36081fc1-f07a-44ac-b6a3-9fdd959d6aa0');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_36081fc1-f07a-44ac-b6a3-9fdd959d6aa0" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aString <span style="color:Blue;">As</span> <span style="color:Blue;">String</span>
+<span style="color:Blue;">Dim</span> aChar <span style="color:Blue;">As</span> <span style="color:Blue;">Char</span>
+<span style="color:Green;">' CChar converts only the first character of the string.</span>
+aString = <span style="color:#A31515;">"BCD"</span>
+<span style="color:Green;">' The following line of code sets aChar to "B".</span>
+aChar = <span style="color:Blue;">CChar</span>(aString)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+  <p>The input argument to <span><span class="input">CChar</span></span> must be of data type <span><span class="input">Char</span></span> or <span><span class="input">String</span></span>. You cannot use <span><span class="input">CChar</span></span> to convert a number to a character, because <span><span class="input">CChar</span></span>
+ cannot accept a numeric data type. The following example obtains a 
+number representing a code point (character code) and converts it to the
+ corresponding character. It uses the <span><a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.interaction.inputbox.aspx">InputBox</a></span> function to obtain the string of digits, <span><span class="input">CInt</span></span> to convert the string to type <span><span class="input">Integer</span></span>, and <span><span class="input">ChrW</span></span> to convert the number to type <span><span class="input">Char</span></span>.</p>
+  <div id="snippetGroup3">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_95b48260-722a-4b9f-9070-921f3bd8ba67');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_95b48260-722a-4b9f-9070-921f3bd8ba67" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> someDigits <span style="color:Blue;">As</span> <span style="color:Blue;">String</span>
+<span style="color:Blue;">Dim</span> codePoint <span style="color:Blue;">As</span> <span style="color:Blue;">Integer</span>
+<span style="color:Blue;">Dim</span> thisChar <span style="color:Blue;">As</span> <span style="color:Blue;">Char</span>
+someDigits = InputBox(<span style="color:#A31515;">"Enter code point of character:"</span>)
+codePoint = <span style="color:Blue;">CInt</span>(someDigits)
+<span style="color:Green;">' The following line of code sets thisChar to the Char value of codePoint.</span>
+thisChar = ChrW(codePoint)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CDate Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CDate</span></span> function to convert strings to <span><span class="input">Date</span></span>
+ values. In general, hard-coding dates and times as strings (as shown in
+ this example) is not recommended. Use date literals and time literals, 
+such as #Feb 12, 1969# and #4:45:23 PM#, instead.</p>
+  <div id="snippetGroup4">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_fd22d724-2f7b-48f5-8fcb-4cd1b68b8871');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_fd22d724-2f7b-48f5-8fcb-4cd1b68b8871" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDateString, aTimeString <span style="color:Blue;">As</span> <span style="color:Blue;">String</span>
+<span style="color:Blue;">Dim</span> aDate, aTime <span style="color:Blue;">As</span> <span style="color:Blue;">Date</span>
+aDateString = <span style="color:#A31515;">"February 12, 1969"</span>
+aTimeString = <span style="color:#A31515;">"4:35:47 PM"</span>
+<span style="color:Green;">' The following line of code sets aDate to a Date value.</span>
+aDate = <span style="color:Blue;">CDate</span>(aDateString)
+<span style="color:Green;">' The following line of code sets aTime to Date value.</span>
+aTime = <span style="color:Blue;">CDate</span>(aTimeString)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CDbl Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <div id="snippetGroup5">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_36d70bef-a24c-4940-8180-b381d99aa2ef');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_36d70bef-a24c-4940-8180-b381d99aa2ef" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDec <span style="color:Blue;">As</span> <span style="color:Blue;">Decimal</span>
+<span style="color:Blue;">Dim</span> aDbl <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Green;">' The following line of code uses the literal type character D to make aDec a Decimal.</span>
+aDec = 234.456784D
+<span style="color:Green;">' The following line of code sets aDbl to 1.9225456288E+1.</span>
+aDbl = <span style="color:Blue;">CDbl</span>(aDec * 8.2D * 0.01D)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CDec Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CDec</span></span> function to convert a numeric value to <span><span class="input">Decimal</span></span>.</p>
+  <div id="snippetGroup6">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_4655004e-1c36-410f-a972-c339a8617fc6');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_4655004e-1c36-410f-a972-c339a8617fc6" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aDecimal <span style="color:Blue;">As</span> <span style="color:Blue;">Decimal</span>
+aDouble = 10000000.0587
+<span style="color:Green;">' The following line of code sets aDecimal to 10000000.0587.</span>
+aDecimal = <span style="color:Blue;">CDec</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CInt Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CInt</span></span> function to convert a value to <span><span class="input">Integer</span></span>.</p>
+  <div id="snippetGroup7">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_bec223b6-ac91-4669-9d63-2bd1e1190a64');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_bec223b6-ac91-4669-9d63-2bd1e1190a64" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDbl <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> anInt <span style="color:Blue;">As</span> <span style="color:Blue;">Integer</span>
+aDbl = 2345.5678
+<span style="color:Green;">' The following line of code sets anInt to 2346.</span>
+anInt = <span style="color:Blue;">CInt</span>(aDbl)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CLng Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CLng</span></span> function to convert values to <span><span class="input">Long</span></span>.</p>
+  <div id="snippetGroup8">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_7fb3730c-9b15-402b-8b61-fc7f50025af7');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_7fb3730c-9b15-402b-8b61-fc7f50025af7" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDbl1, aDbl2 <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aLng1, aLng2 <span style="color:Blue;">As</span> <span style="color:Blue;">Long</span>
+aDbl1 = 25427.45
+aDbl2 = 25427.55
+<span style="color:Green;">' The following line of code sets aLng1 to 25427.</span>
+aLng1 = <span style="color:Blue;">CLng</span>(aDbl1)
+<span style="color:Green;">' The following line of code sets aLng2 to 25428.</span>
+aLng2 = <span style="color:Blue;">CLng</span>(aDbl2)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CObj Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CObj</span></span> function to convert a numeric value to <span><span class="input">Object</span></span>. The <span><span class="input">Object</span></span> variable itself contains only a four-byte pointer, which points to the <span><span class="input">Double</span></span> value assigned to it.</p>
+  <div id="snippetGroup9">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_cc195191-9705-4e17-87c4-b475495b5ad4');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_cc195191-9705-4e17-87c4-b475495b5ad4" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> anObject <span style="color:Blue;">As</span> <span style="color:Blue;">Object</span>
+aDouble = 2.7182818284
+<span style="color:Green;">' The following line of code sets anObject to a pointer to aDouble.</span>
+anObject = <span style="color:Blue;">CObj</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CSByte Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CSByte</span></span> function to convert a numeric value to <span><span class="input">SByte</span></span>.</p>
+  <div id="snippetGroup10">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_8a563d83-4584-4fc2-9aaa-9b33312f3240');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8a563d83-4584-4fc2-9aaa-9b33312f3240" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> anSByte <span style="color:Blue;">As</span> <span style="color:Blue;">SByte</span>
+aDouble = 39.501
+<span style="color:Green;">' The following line of code sets anSByte to 40.</span>
+anSByte = <span style="color:Blue;">CSByte</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CShort Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CShort</span></span> function to convert a numeric value to <span><span class="input">Short</span></span>.</p>
+  <div id="snippetGroup11">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_4fecb818-514d-465b-b757-44999284f8c4');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_4fecb818-514d-465b-b757-44999284f8c4" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aByte <span style="color:Blue;">As</span> <span style="color:Blue;">Byte</span>
+<span style="color:Blue;">Dim</span> aShort <span style="color:Blue;">As</span> <span style="color:Blue;">Short</span>
+aByte = 100
+<span style="color:Green;">' The following line of code sets aShort to 100.</span>
+aShort = <span style="color:Blue;">CShort</span>(aByte)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CSng Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CSng</span></span> function to convert values to <span><span class="input">Single</span></span>.</p>
+  <div id="snippetGroup12">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_da9baa62-d56c-4316-ae48-91c39b8ef600');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_da9baa62-d56c-4316-ae48-91c39b8ef600" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble1, aDouble2 <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aSingle1, aSingle2 <span style="color:Blue;">As</span> <span style="color:Blue;">Single</span>
+aDouble1 = 75.3421105
+aDouble2 = 75.3421567
+<span style="color:Green;">' The following line of code sets aSingle1 to 75.34211.</span>
+aSingle1 = <span style="color:Blue;">CSng</span>(aDouble1)
+<span style="color:Green;">' The following line of code sets aSingle2 to 75.34216.</span>
+aSingle2 = <span style="color:Blue;">CSng</span>(aDouble2)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CStr Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CStr</span></span> function to convert a numeric value to <span><span class="input">String</span></span>.</p>
+  <div id="snippetGroup13">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_8ce81a68-56a3-403b-97da-d2a8e33c37b3');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8ce81a68-56a3-403b-97da-d2a8e33c37b3" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aString <span style="color:Blue;">As</span> <span style="color:Blue;">String</span>
+aDouble = 437.324
+<span style="color:Green;">' The following line of code sets aString to "437.324".</span>
+aString = <span style="color:Blue;">CStr</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+  <p>The following example uses the <span><span class="input">CStr</span></span> function to convert <span><span class="input">Date</span></span> values to <span><span class="input">String</span></span> values.</p>
+  <div id="snippetGroup14">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_df46cbbd-4d35-45ab-924b-262693fae8d7');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_df46cbbd-4d35-45ab-924b-262693fae8d7" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDate <span style="color:Blue;">As</span> <span style="color:Blue;">Date</span>
+<span style="color:Blue;">Dim</span> aString <span style="color:Blue;">As</span> <span style="color:Blue;">String</span>
+<span style="color:Green;">' The following line of code generates a COMPILER ERROR because of invalid format.</span>
+<span style="color:Green;">' aDate = #February 12, 1969 00:00:00#</span>
+<span style="color:Green;">' Date literals must be in the format #m/d/yyyy# or they are invalid.</span>
+<span style="color:Green;">' The following line of code sets the time component of aDate to midnight.</span>
+aDate = #2/12/1969#
+<span style="color:Green;">' The following conversion suppresses the neutral time value of 00:00:00.</span>
+<span style="color:Green;">' The following line of code sets aString to "2/12/1969".</span>
+aString = <span style="color:Blue;">CStr</span>(aDate)
+<span style="color:Green;">' The following line of code sets the time component of aDate to one second past midnight.</span>
+aDate = #2/12/1969 12:00:01 AM#
+<span style="color:Green;">' The time component becomes part of the converted value.</span>
+<span style="color:Green;">' The following line of code sets aString to "2/12/1969 12:00:01 AM".</span>
+aString = <span style="color:Blue;">CStr</span>(aDate)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+  <p>
+    <span>
+      <span class="input">CStr</span>
+    </span> always renders a <span><span class="input">Date</span></span> value in the standard short format for the current locale, for example, "6/15/2003 4:35:47 PM". However, <span><span class="input">CStr</span></span> suppresses the <span class="parameter">neutral values</span> of 1/1/0001 for the date and 00:00:00 for the time.</p>
+  <p>For more detail on the values returned by <span><span class="input">CStr</span></span>, see <span><a href="http://msdn.microsoft.com/en-us/library/ch47ss2a.aspx">Return Values for the CStr Function (Visual Basic)</a></span>.</p>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CUInt Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CUInt</span></span> function to convert a numeric value to <span><span class="input">UInteger</span></span>.</p>
+  <div id="snippetGroup15">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_c7f955f2-1222-4ebc-9f9b-2fe313e4c109');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_c7f955f2-1222-4ebc-9f9b-2fe313e4c109" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aUInteger <span style="color:Blue;">As</span> <span style="color:Blue;">UInteger</span>
+aDouble = 39.501
+<span style="color:Green;">' The following line of code sets aUInteger to 40.</span>
+aUInteger = <span style="color:Blue;">CUInt</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CULng Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CULng</span></span> function to convert a numeric value to <span><span class="input">ULong</span></span>.</p>
+  <div id="snippetGroup16">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_9e4972ff-5070-4e2c-b6c2-6a930f10d095');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_9e4972ff-5070-4e2c-b6c2-6a930f10d095" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aULong <span style="color:Blue;">As</span> <span style="color:Blue;">ULong</span>
+aDouble = 39.501
+<span style="color:Green;">' The following line of code sets aULong to 40.</span>
+aULong = <span style="color:Blue;">CULng</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<h3 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">CUShort Example</h3>
+<div class="subsection" xmlns="http://www.w3.org/1999/xhtml">
+  <p>The following example uses the <span><span class="input">CUShort</span></span> function to convert a numeric value to <span><span class="input">UShort</span></span>.</p>
+  <div id="snippetGroup17">
+
+<div class="codeSnippetContainer" xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+    <div class="codeSnippetContainerTabs">
+        <div class="codeSnippetContainerTab codeSnippetContainerTabSingle" dir="ltr"><a>VB</a></div>
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" title="Copy to clipboard." href="javascript:CodeSnippet_CopyCode('CodeSnippetContainerCode_751c02a8-7eb0-4421-adfe-904a392d376e');">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_751c02a8-7eb0-4421-adfe-904a392d376e" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>
+<span style="color:Blue;">Dim</span> aDouble <span style="color:Blue;">As</span> <span style="color:Blue;">Double</span>
+<span style="color:Blue;">Dim</span> aUShort <span style="color:Blue;">As</span> <span style="color:Blue;">UShort</span>
+aDouble = 39.501
+<span style="color:Green;">' The following line of code sets aUShort to 40.</span>
+aUShort = <span style="color:Blue;">CUShort</span>(aDouble)
+
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+</div>
+</div></div></div><div xmlns=""><div class="LW_CollapsibleArea_TitleDiv"><div><a href="javascript:void(0)" class="LW_CollapsibleArea_TitleAhref" title="Collapse"><img src="typeconversion_files/clear.gif" class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"><span class="LW_CollapsibleArea_Title">See Also</span></a><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr"></div></div></div><div class="sectionblock"><a id="seeAlsoToggle" xmlns="http://www.w3.org/1999/xhtml">
+  
+</a>
+<h4 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">Reference</h4>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/1bbh5ae4.aspx">Conversion Functions (Visual Basic)</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.strings.asc.aspx">Asc</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.strings.ascw.aspx">AscW</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.strings.chr.aspx">Chr</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.strings.chrw.aspx">ChrW</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.int.aspx">Int</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.fix.aspx">Fix</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.strings.format.aspx">Format</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.hex.aspx">Hex</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.oct.aspx">Oct</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.str.aspx">Str</a>
+  </span>
+</div>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/microsoft.visualbasic.conversion.val.aspx">Val</a>
+  </span>
+</div>
+<h4 class="subHeading" xmlns="http://www.w3.org/1999/xhtml">Other Resources</h4>
+<div class="seeAlsoStyle" xmlns="http://www.w3.org/1999/xhtml">
+  <span>
+    <a href="http://msdn.microsoft.com/en-us/library/hcb26cc8.aspx">Type Conversions in Visual Basic</a>
+  </span>
+</div></div></div></div>
+  </div>
+</div>
+
+        
+
+
+
+<div id="contentFeedback">
+    <form method="post" action="/en-us/library/feedback/add/s2dy91zy.aspx">
+        <input name="__RequestVerificationToken" value="5OwywilQKRZFa6/Zg7eMGsz0WISl2ZqfDkLJpJaaFkp16W8EchLw9Swqb134M3FJ0vhhzCCefeQod4jZfq9xSyMd8D0nGky1hkSVlOfEPntJV4PuTi8Tt/d7GlkW9Rg8996rOg==" type="hidden">
+    <div id="contentFeedbackContainer">
+        <div class="FeedbackTitleContainer">
+            <a name="feedback"></a>
+        Did you find this helpful?
+            <input id="rdIsUsefulYes" name="rdIsUseful" value="1" onclick="toggleContentFeedback('Yes');" type="radio"><label for="rdIsUsefulYes">Yes</label>
+            <input id="rdIsUsefulNo" name="rdIsUseful" value="0" onclick="toggleContentFeedback('No');" type="radio"><label for="rdIsUsefulNo">No</label>
+        
+        </div>
+        
+            <div id="contentFeedbackQAContainer">
+                
+                    <div id="feedbackListNoContainer" class="FeedbackListContainer">
+                        
+                            <div>
+                                <input id="chkbxNo201" name="chkbxNo" value="201" type="checkbox">
+                                <label for="chkbxNo201">Not accurate</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo202" name="chkbxNo" value="202" type="checkbox">
+                                <label for="chkbxNo202">Not enough depth</label>
+                            </div>
+                        
+                            <div>
+                                <input id="chkbxNo203" name="chkbxNo" value="203" type="checkbox">
+                                <label for="chkbxNo203">Need more code examples</label>
+                            </div>
+                        
+                    </div>
+                
+                <div class="FeedbackTellUsMoreContainer">
+                    <textarea id="feedbackText" name="feedbackText" class="TellUsMoreTextBoxSearchLoaded" onfocus="WatermarkFocus(this, 'Tell us more...', 'TellUsMoreTextBoxSearch')" onblur="WatermarkBlur(this, 'Tell us more...', 'TellUsMoreTextBoxSearchLoaded')" onkeydown="TextBoxCharactersCounter(this, document.getElementById('feedbackTextCounter'), 1500)" onkeyup="TextBoxCharactersCounter(this, document.getElementById('feedbackTextCounter'), 1500)">Tell us more...</textarea>
+                </div>
+                <span class="counter">(<span id="feedbackTextCounter">1500</span> characters remaining)</span>
+                <input id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/s2dy91zy.aspx" type="hidden">
+                <input id="submit" value="Submit" title="Click to Submit Feedback" onclick="WatermarkOnSubmit(document.getElementById('feedbackText'), 'Tell us more...', 'TellUsMoreTextBoxSearch')" type="submit">
+                <div style="clear: both;"></div>
+            </div>  
+        
+    </div>
+    </form>
+</div>
+
+    </div>
+    
+    <div class="topicEndLine">
+    </div>
+    <div id="CommunityContent" class="CommunityContent">
+      
+<div class="CommunityContentContainer">
+    <div id="CommunityContentHeader" class="CommunityContentHeader">
+      <div class="CommunityContentHeaderTitleContainer">
+        <span class="CommunityContentHeaderTitle h1">Community Content</span>
+          
+        <a href="http://msdn.microsoft.com/en-us/library/community/add/s2dy91zy.aspx" title="Add" rel="nofollow">Add</a>
+          
+        </div>
+        <div class="CommunityContentFaq">
+            <a href="http://msdn.microsoft.com/en-us/library/community-edits.rss?topic=s2dy91zy%7Cen-us%7CVS.100" title="Annotations" rel="nofollow"><img class="cl_rss_button" alt="Annotations" src="typeconversion_files/clear.gif"></a>
+            <a href="http://msdn.microsoft.com/en-us/library/community-msdnwikifaq.aspx" title="FAQ" rel="nofollow">FAQ</a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    
+    
+
+</div>
+    </div>
+    
+  </div>
+        
+  </div>
+  <div class="footer">
+    
+
+<div id="footer" class="msdn footerContainer cl_footer_slice">
+  <div class="footerLogoContainer">
+    <div class="footerContent">
+    <div class="copyright">
+      © 2012 Microsoft. All rights reserved.</div>
+    <div class="footerLogo cl_footer_logo"></div>
+    <a href="http://msdn.microsoft.com/cc300389.aspx">Terms of Use</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/en-us.mspx">Trademarks</a><span class="pipe"> | </span>
+    <a href="http://www.microsoft.com/info/privacy.mspx">Privacy Statement</a>
+    <span class="pipe">| </span>
+    <span class="FeedbacklinkDisabled" id="FeedbacklinkDisabled">Site Feedback</span>
+    <a id="Feedbacklink" title="Site Feedback" class="FeedbackLink" href="javascript:void(0)">
+      Site Feedback
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+          <img id="feedBackImg" class="cl_footer_feedback_icon" src="typeconversion_files/Msdn_ImageSprite.png" alt="Site Feedback">
+        </span>
+      </a>
+    
+  <div id="FeedbackContainer" class="FeedbackContainer">
+    <form id="siteFeedbackForm" method="post" action="/en-us/library/feedback/add/s2dy91zy.aspx">
+        <input name="__RequestVerificationToken" value="vZ5vcypItQ70/m/7g/I9cBfi6O5Cj2j3F1S43wQwBO6oX4RZnlqfH5INjhLKRLQijdAgGsPRN+buDPsSfRVYBn/lmr0qnF1cNcHOzJ7q9vaVg+wpkfZXKLuzWV6puhkxQIrMwQ==" type="hidden">
+    <div class="FeedbackTitleContainer">
+        <div class="FeedbackTitle">
+            Site Feedback</div>
+        <div class="FeedbackCancel">
+            <a href="javascript:;" onclick="document.getElementById('FeedbackContainer').style.display = 'none';">x</a>
+            </div>
+    </div>
+    <div class="FeedbackData">
+        <div class="FeedbackInfoText">
+            Tell us about your experience...
+        </div>
+        <div class="QuestionText">
+            Did the page load quickly?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="searchBox" name="searchBox" value="1" type="radio"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="searchBox" name="searchBox" value="0" type="radio"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Do you like the page design?
+        </div>
+        <div class="AnswerText">
+            
+            <span>
+                Yes<span>
+                    <input id="tabbedCode" name="tabbedCode" value="1" type="radio"></span></span>
+            
+            <span>
+                No<span>
+                    <input id="tabbedCode" name="tabbedCode" value="0" type="radio"></span></span>
+            
+        </div>
+        <div class="QuestionText">
+            Tell us more
+        </div>
+        <div class="FeedbackTextAreaContainer">
+            <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="FeedbackTextArea"></textarea>
+            
+            <textarea id="feedbackDescription" name="feedbackDescription" cols="25" rows="10" style="display: none;">Enter description here.</textarea>
+            <input id="feedbackPriority" name="feedbackPriority" value="" type="hidden">
+            <input id="feedbackSourceUrl" name="feedbackSourceUrl" value="" type="hidden">
+            <input id="ClientIP" name="ClientIP" value="" type="hidden">
+            <input id="ClientOS" name="ClientOS" value="" type="hidden">
+            <input id="ClientBrowser" name="ClientBrowser" value="" type="hidden">
+            <input id="ClientTime" name="ClientTime" value="" type="hidden">
+            <input id="ClientTimeZone" name="ClientTimeZone" value="" type="hidden">
+            
+            
+        </div>
+        <div>
+            <input id="siteFeedbackSubmit" value="Send" class="FeedbackSubmit" onclick="submitSiteFeedback('-1');" type="submit">
+        </div>
+    </div>
+    <input id="returnUrl" name="returnUrl" value="http://msdn.microsoft.com/en-us/library/s2dy91zy.aspx" type="hidden">
+    
+    
+    <input id="feedBackVersion" name="feedBackVersion" value="1" type="hidden">
+    
+  </form> 
+</div>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+    
+        <div class="MetricsContainer">
+            
+    <div class="WebtrendsContainer">
+      
+
+<script type="text/javascript">
+//<![CDATA[
+  var literalNormalizedUrl = '/en-us/library/s2dy91zy(d=lightweight,l=en-us,v=vs.100).aspx';
+  var wt_nvr_ru = 'WT_NVR_RU';
+  var wt_fpcdom = '.microsoft.com';
+  var wt_domlist = 'msdn.microsoft.com';
+  var wt_pathlist = '';
+  var wt_paramlist = 'DCSext.mtps_devcenter';
+  var wt_siteid = 'MSDN';
+  var gDomain = 'm.webtrends.com';
+  var gDcsId = 'dcsmgru7m99k7mqmgrhudo0k8_8c6m';
+  var gFpc = 'WT_FPC';
+  if (document.cookie.indexOf(gFpc + "=") == -1) {
+    var wtidJs = document.createElement("script");
+    wtidJs.src = "//" + gDomain + "/" + gDcsId + "/wtid.js";
+    document.getElementsByTagName("head")[0].appendChild(wtidJs);
+  }
+  var detectedLocale = 'en-us';
+  var wtsp = 'msdnlib_devtools_lang';
+  var gTrackEvents = '0';
+/*]]>*/
+</script>
+<noscript><div><img alt="DCSIMG" id="Img1" width="1" height="1" src="http://m.webtrends.com/dcsmgru7m99k7mqmgrhudo0k8_8c6m/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" /></div></noscript>
+
+
+    </div>
+    
+    <div class="OmnitureContainer">
+      
+
+
+
+<script type="text/javascript">
+  var omni_guid = '8cc46f4e-c1e8-4517-a31d-1195c8f07a17'; 
+</script>
+
+
+
+<noscript>
+    <a href="http://www.omniture.com" title="Web Analytics">
+        <img src="//msstonojsmsdn.112.2o7.net/b/ss/msstonojsmsdn/1/H.20.2--NS/0" height="1" width="1" border="0" alt="" /></a>
+</noscript>
+
+
+    </div>
+    
+        </div>
+        
+<script type="text/javascript">
+    //<![CDATA[
+    var brokerJs = document.createElement("script");
+    brokerJs.src = "//js.microsoft.com/library/svy/sto/broker.js";
+    document.getElementsByTagName("head")[0].appendChild(brokerJs);
+    /*]]>*/
+</script>
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+<script type="text/javascript" src="typeconversion_files/Combined.js" xmlns="http://www.w3.org/1999/xhtml"></script>
+
+<div id="_WEDCSInsertedData" style="display: none;"><iframe id="_msnFrame" src="typeconversion_files/Sync.htm" style="z-index: -1; height: 1px; width: 1px; display: none; visibility: hidden;" onload="javascript:MscomBeacon();"></iframe></div></body></html>
